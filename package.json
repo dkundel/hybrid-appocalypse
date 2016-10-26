@@ -1,0 +1,19 @@
+{
+  "name": "hybrid-appocalypse",
+  "version": "1.0.0",
+  "description": "Electron app / presentation with the title \"Hybrid Appocalypse\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkundel/hybrid-appocalypse.git"
+  },
+  "author": "Dominik Kundel <dominik.kundel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dkundel/hybrid-appocalypse/issues"
+  },
+  "homepage": "https://github.com/dkundel/hybrid-appocalypse#readme"
+}
