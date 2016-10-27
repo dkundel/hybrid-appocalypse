@@ -4,7 +4,8 @@
   "description": "Electron app / presentation with the title \"Hybrid Appocalypse\"",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/dkundel/hybrid-appocalypse/issues"
   },
-  "homepage": "https://github.com/dkundel/hybrid-appocalypse#readme"
+  "homepage": "https://github.com/dkundel/hybrid-appocalypse#readme",
+  "dependencies": {
+    "electron": "^1.4.4",
+    "express": "^4.14.0"
+  }
 }
