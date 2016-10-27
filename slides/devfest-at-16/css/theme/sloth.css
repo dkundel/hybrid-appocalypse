@@ -345,3 +345,31 @@ body {
   width: 100%;
   height: 100%;
   background: #f4f7f5; }
+
+.reveal section.code.present {
+  height: 100%;
+  top: 0 !important;
+  box-sizing: border-box; }
+  .reveal section.code.present > .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+    min-height: 90%;
+    margin-bottom: 20px;
+    position: relative; }
+  .reveal section.code.present pre {
+    display: flex;
+    flex-direction: column; }
+  .reveal section.code.present pre:nth-of-type(2) {
+    flex: 1; }
+  .reveal section.code.present pre code {
+    max-height: 100%;
+    min-height: 100%;
+    flex: 1; }
+  .reveal section.code.present button.execute {
+    background: #13293d;
+    border: 0;
+    font-size: 0.6em;
+    color: #f4f7f5;
+    width: 90%;
+    margin: auto; }
