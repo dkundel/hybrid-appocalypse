@@ -1,5 +1,6 @@
 const {app, BrowserWindow} = require('electron');
 const express = require('express');
+const mkdirp = require('mkdirp');
 
 const PORT = process.env.PORT || 9999;
 
@@ -10,6 +11,8 @@ let slidedeck;
 if (process.argv.length > 2) {
   slidedeck = process.argv[2];
 }
+
+mkdirp.sync('code');
 
 const URL = `http://localhost:${PORT}/${slidedeck}/index.html`;
 
