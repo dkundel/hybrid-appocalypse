@@ -45,6 +45,10 @@ $selectionColor: $color5;
 @import "../template/theme";
 // ---------------------------------------------
 
+.reveal .octicon {
+  font-family: octicons;
+}
+
 .reveal footer {
   position: fixed;
   bottom: 0;
@@ -56,6 +60,7 @@ $selectionColor: $color5;
 
 .reveal strong, .reveal b {
   color: $color3;
+  font-weight: inherit;
 }
 
 .reveal em, .reveal i {
@@ -64,6 +69,14 @@ $selectionColor: $color5;
   font-size: 1.5em;
   text-transform: none;
   font-weight: normal;
+}
+
+.reveal {
+  h1, h2, h3, h4, h5, h6 {
+    em, i {
+      font-weight: normal;
+    }
+  } 
 }
 
 .reveal {
@@ -114,7 +127,7 @@ $selectionColor: $color5;
     color: $color2;
   }
 
-  &.present + footer {
+  &.present ~ footer {
     color: $color2;
   }
 }
@@ -135,33 +148,91 @@ $selectionColor: $color5;
   > .wrapper {
     display: flex;
     flex-direction: column;
-    max-height: 90%;
-    min-height: 90%;
     margin-bottom: 20px;
     position: relative;
+    height: 100%;
+
+    &.show-code {
+      button.toggle-code {
+        border-bottom: 5px solid $color3;
+      }
+
+      &:not(.show-output) {
+        code.input {
+          min-height: 100%;
+        }
+
+        code.output {
+          display: none;
+        }
+      }
+    }
+
+    &.show-output {
+      button.toggle-output {
+        border-bottom: 5px solid $color3;
+      }
+
+      &:not(.show-code) {
+        code.output {
+          min-height: 100%;
+        }
+
+        code.input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background: darken($color2, 5);
+    color: $color5;
+
+    > div {
+      padding: 10px 20px;
+      flex: 1;
+      color: $color3;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    button {
+      .label {
+        margin-right: 20px;
+      }
+
+      background: none;
+      color: $color5;
+      border: 0;
+      outline: 0;
+      margin: 0;
+      padding: 10px 20px 20px 20px;
+      font-size: 1.8rem;
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 
   pre {
+    margin-top: 0;
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
-  }
 
-  pre:nth-of-type(2) {
-    flex: 1;
-  }
+    code {
+      flex: 1;
+      font-size: 1.4em;
+      box-sizing: border-box;
 
-  pre code {
-    max-height: 100%;
-    min-height: 100%;
-    flex: 1;
-  }
-
-  button.execute {
-    background: $color2;
-    border: 0;
-    font-size: 0.6em;
-    color: $color5;
-    width: 90%;
-    margin: auto;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

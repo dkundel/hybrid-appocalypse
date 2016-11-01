@@ -282,6 +282,9 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
+.reveal .octicon {
+  font-family: octicons; }
+
 .reveal footer {
   position: fixed;
   bottom: 0;
@@ -291,13 +294,17 @@ body {
   font-weight: 200; }
 
 .reveal strong, .reveal b {
-  color: #9fd356; }
+  color: #9fd356;
+  font-weight: inherit; }
 
 .reveal em, .reveal i {
   font-style: normal;
   font-family: "Cookie", serif;
   font-size: 1.5em;
   text-transform: none;
+  font-weight: normal; }
+
+.reveal h1 em, .reveal h1 i, .reveal h2 em, .reveal h2 i, .reveal h3 em, .reveal h3 i, .reveal h4 em, .reveal h4 i, .reveal h5 em, .reveal h5 i, .reveal h6 em, .reveal h6 i {
   font-weight: normal; }
 
 .reveal {
@@ -336,7 +343,7 @@ body {
   color: #13293d; }
   .reveal section.alternative h1, .reveal section.alternative h2, .reveal section.alternative h3, .reveal section.alternative h4, .reveal section.alternative h5, .reveal section.alternative h6 {
     color: #13293d; }
-  .reveal section.alternative.present + footer {
+  .reveal section.alternative.present ~ footer {
     color: #13293d; }
 
 .slide-background.present.alternative::before {
@@ -353,23 +360,54 @@ body {
   .reveal section.code.present > .wrapper {
     display: flex;
     flex-direction: column;
-    max-height: 90%;
-    min-height: 90%;
     margin-bottom: 20px;
-    position: relative; }
-  .reveal section.code.present pre {
+    position: relative;
+    height: 100%; }
+    .reveal section.code.present > .wrapper.show-code button.toggle-code {
+      border-bottom: 5px solid #9fd356; }
+    .reveal section.code.present > .wrapper.show-code:not(.show-output) code.input {
+      min-height: 100%; }
+    .reveal section.code.present > .wrapper.show-code:not(.show-output) code.output {
+      display: none; }
+    .reveal section.code.present > .wrapper.show-output button.toggle-output {
+      border-bottom: 5px solid #9fd356; }
+    .reveal section.code.present > .wrapper.show-output:not(.show-code) code.output {
+      min-height: 100%; }
+    .reveal section.code.present > .wrapper.show-output:not(.show-code) code.input {
+      display: none; }
+  .reveal section.code.present .toolbar {
     display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background: #0d1c2a;
+    color: #f4f7f5; }
+    .reveal section.code.present .toolbar > div {
+      padding: 10px 20px;
+      flex: 1;
+      color: #9fd356;
+      font-family: monospace;
+      text-align: center; }
+    .reveal section.code.present .toolbar button {
+      background: none;
+      color: #f4f7f5;
+      border: 0;
+      outline: 0;
+      margin: 0;
+      padding: 10px 20px 20px 20px;
+      font-size: 1.8rem; }
+      .reveal section.code.present .toolbar button .label {
+        margin-right: 20px; }
+      .reveal section.code.present .toolbar button:hover, .reveal section.code.present .toolbar button:focus {
+        background: rgba(255, 255, 255, 0.1); }
+  .reveal section.code.present pre {
+    margin-top: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column; }
-  .reveal section.code.present pre:nth-of-type(2) {
-    flex: 1; }
-  .reveal section.code.present pre code {
-    max-height: 100%;
-    min-height: 100%;
-    flex: 1; }
-  .reveal section.code.present button.execute {
-    background: #13293d;
-    border: 0;
-    font-size: 0.6em;
-    color: #f4f7f5;
-    width: 90%;
-    margin: auto; }
+    .reveal section.code.present pre code {
+      flex: 1;
+      font-size: 1.4em;
+      box-sizing: border-box; }
+      .reveal section.code.present pre code:focus {
+        outline: none; }
