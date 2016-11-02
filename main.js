@@ -10,6 +10,8 @@ let slidedeck;
 
 if (process.argv.length > 2) {
   slidedeck = process.argv[2];
+} else {
+  slidedeck = 'devfest-at-16';
 }
 
 mkdirp.sync('code');
