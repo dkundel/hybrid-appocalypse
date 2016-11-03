@@ -10,6 +10,7 @@
 - [Electron](http://electron.atom.io/) - Project Page
 - [Electron API Demo](https://github.com/electron/electron-api-demos) - Great Electron app that shows off different APIs
 - [Electron Quick Start](http://electron.atom.io/docs/tutorial/quick-start/) - Shows you how to get started with developing with Electron
+- [Electron Organization](https://github.com/electron) - :github: organization for Electron
 - [Submission to App Store](http://electron.atom.io/docs/tutorial/mac-app-store-submission-guide/) - Guide how to deploy to the Mac App Store
 - [Windows Store Guide](http://electron.atom.io/docs/tutorial/windows-store-guide/) - Guide how to submit to the Windows Store
 - [Electron Community](http://electron.atom.io/community/) - Great page that highlights various community contributions (modules, UI components, videos, meetups, etc.)
