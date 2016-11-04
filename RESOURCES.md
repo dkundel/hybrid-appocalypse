@@ -15,7 +15,8 @@
 - [Windows Store Guide](http://electron.atom.io/docs/tutorial/windows-store-guide/) - Guide how to submit to the Windows Store
 - [Electron Community](http://electron.atom.io/community/) - Great page that highlights various community contributions (modules, UI components, videos, meetups, etc.)
 - [Devtron](http://electron.atom.io/devtron) - DevTools extension that helps you inspect, debug, troubleshoot your app
-- [Spectron](http://electron.atom.io/spectron/) - Integration test tool for Electron 
+- [Spectron](http://electron.atom.io/spectron/) - Integration test tool for Electron
+- [15 Essential Packages to Get Started](https://nodesource.com/blog/fifteen-essential-packages-to-get-started-with-electron/) - A nice overview about very useful electron focused packages 
 
 ## :iphone: Mobile
 
