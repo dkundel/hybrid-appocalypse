@@ -8,15 +8,17 @@ let win;
 let server;
 let slidedeck;
 
-if (process.argv.length > 2) {
+if (process.argv.length > 2 && process.argv[2] !== '--notes') {
   slidedeck = process.argv[2];
 } else {
   slidedeck = 'devfest-at-16';
 }
 
+let extension = process.argv.indexOf('--notes') !== -1 ? '.notes' : '';
+
 mkdirp.sync('code');
 
-const URL = `http://localhost:${PORT}/${slidedeck}/index.html`;
+const URL = `http://localhost:${PORT}/${slidedeck}/index${extension}.html`;
 
 function createWindow() {
   win = new BrowserWindow({width: 800, height: 600, frame: true});
