@@ -1,0 +1,40 @@
+<div>
+  <h1>Hello Devfest</h1>
+</div>
+<div>
+  <p>
+    Node <script>document.write(process.versions.node)</script><br>
+    Chrome <script>document.write(process.versions.chrome)</script><br>
+    Electron <script>document.write(process.versions.electron)</script><br>
+  </p>
+  <button onclick="notify()">PING</button>
+</div>
+<div>
+  <h3>Powered by Electron</h3>
+</div>
+<script>
+  function notify() {
+    new Notification('This is a title', { body: 'This a body. Tribute'});
+  }
+</script>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div {
+    flex: 1;
+  }
+
+  div:first-of-type, div:last-of-type {
+    background: red;
+  }
+</style>
