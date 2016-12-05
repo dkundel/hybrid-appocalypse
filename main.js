@@ -11,7 +11,7 @@ let slidedeck;
 if (process.argv.length > 2 && process.argv[2] !== '--notes') {
   slidedeck = process.argv[2];
 } else {
-  slidedeck = 'devfest-at-16';
+  slidedeck = 'ms-tech-summit-16';
 }
 
 let extension = process.argv.indexOf('--notes') !== -1 ? '.notes' : '';

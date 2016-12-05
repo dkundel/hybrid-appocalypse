@@ -1,0 +1,238 @@
+/**
+ * Sloth theme
+ *
+ * Copyright (C) 2016 Dominik Kundel
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+$color1: rgba(19, 21, 21, 1);
+$color2: rgba(19, 41, 61, 1);
+$color2-translucent-70: rgba(19, 41, 61, 0.7);
+$color2-translucent-90: rgba(19, 41, 61, 0.7);
+$color3: rgba(159, 211, 86, 1);
+$color4: rgba(74, 64, 99, 1);
+$color5: rgba(244, 247, 245, 1);
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Cookie|Open+Sans:300,400,600|Oswald:400,700');
+
+// Override theme settings (see ../template/settings.scss):
+$mainFont: 'Open Sans', 'Helvetica', sans-serif;
+$headingFont: 'Oswald', 'Impact', sans-serif;
+$headingFontWeight: 700;
+$backgroundColor: $color2;
+$backgroundImageFilter: $color2-translucent-70;
+$mainColor: $color5;
+$headingColor: $color5;
+$linkColor: $color3;
+$italicFont: 'Cookie', serif;
+$backdropColor: $color2-translucent-90;
+
+$selectionBackgroundColor: $color4;
+$selectionColor: $color5;
+
+// Background generator
+@mixin bodyBackground() {
+
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .octicon {
+  font-family: octicons;
+}
+
+.reveal footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.6em;
+  font-weight: 200;
+}
+
+.reveal strong, .reveal b {
+  color: $color3;
+  font-weight: inherit;
+}
+
+.reveal em, .reveal i {
+  font-style: normal;
+  font-family: $italicFont;
+  font-size: 1.5em;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.reveal {
+  h1, h2, h3, h4, h5, h6 {
+    em, i {
+      font-weight: normal;
+    }
+  } 
+}
+
+.reveal {
+  font-weight: 200;
+}
+
+.slide-background.present.filter-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $backgroundImageFilter;
+}
+
+.reveal section.original.present {
+  background: $backdropColor;
+}
+
+.reveal section.original.noback.present {
+  background: none;
+}
+
+.reveal section img {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  max-width: 80%;
+}
+
+.reveal section .split {
+  display: flex;
+  
+  > * {
+    flex: 1;
+    align-self: center;
+  }
+}
+
+.reveal pre code {
+  background: $color2;
+  padding: 12px;
+}
+
+.reveal section.alternative {
+  color: $color2;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $color2;
+  }
+
+  &.present ~ footer {
+    color: $color2;
+  }
+}
+
+.slide-background.present.alternative::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $color5;
+}
+
+.reveal section.code.present {
+  height: 100%;
+  top: 0 !important;
+  box-sizing: border-box;
+
+  > .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    height: 100%;
+
+    &.show-code {
+      button.toggle-code {
+        border-bottom: 5px solid $color3;
+      }
+
+      &:not(.show-output) {
+        code.input {
+          min-height: 100%;
+        }
+
+        code.output {
+          display: none;
+        }
+      }
+    }
+
+    &.show-output {
+      button.toggle-output {
+        border-bottom: 5px solid $color3;
+      }
+
+      &:not(.show-code) {
+        code.output {
+          min-height: 100%;
+        }
+
+        code.input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background: darken($color2, 5);
+    color: $color5;
+
+    > div {
+      padding: 10px 20px;
+      flex: 1;
+      color: $color3;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    button {
+      .label {
+        margin-right: 20px;
+      }
+
+      background: none;
+      color: $color5;
+      border: 0;
+      outline: 0;
+      margin: 0;
+      padding: 10px 20px 20px 20px;
+      font-size: 1.8rem;
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  pre {
+    margin-top: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    code {
+      flex: 1;
+      font-size: 1.4em;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
