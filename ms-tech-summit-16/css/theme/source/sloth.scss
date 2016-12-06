@@ -99,6 +99,10 @@ $selectionColor: $color5;
   background: none;
 }
 
+section.original.noback.no-footer.present ~ footer {
+  display: none;
+}
+
 .reveal section img {
   background: none;
   border: 0;
