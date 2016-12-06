@@ -21,7 +21,7 @@ mkdirp.sync('code');
 const URL = `http://localhost:${PORT}/${slidedeck}/index${extension}.html`;
 
 function createWindow() {
-  win = new BrowserWindow({width: 800, height: 600, frame: true});
+  win = new BrowserWindow({width: 1280, height: 720, frame: true});
 
   win.loadURL(URL);
 
