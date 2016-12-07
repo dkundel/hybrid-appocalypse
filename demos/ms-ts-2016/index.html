@@ -1,0 +1,53 @@
+<div class="red">
+  <p>
+    <script>document.write('Electron ', process.versions.electron)</script>
+  </p>
+  <p>
+    <script>document.write('Chrome ', process.versions.chrome)</script>
+  </p>
+  <p>
+    <script>document.write('Node ', process.versions.node)</script>
+  </p>
+</div>
+<div class="green">
+  <button onclick="notify()">Click Me :)</button>
+</div>
+<div class="blue">
+  <h1>Technical</h1>
+</div>
+<div class="yellow">
+  <h1>Summit!</h1>
+</div>
+<script>
+  let i = 0;
+  function notify() {
+    new Notification(`Notification No. ${i++}`, { body: 'Some content here '});
+  }
+
+</script>
+<style>
+  .red { background: red }
+  .green { background: seagreen }
+  .blue { background: dodgerblue }
+  .yellow { background: yellow }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
