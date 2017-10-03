@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const express = require('express');
 const mkdirp = require('mkdirp');
 
@@ -11,7 +11,7 @@ let slidedeck;
 if (process.argv.length > 2 && process.argv[2] !== '--notes') {
   slidedeck = process.argv[2];
 } else {
-  slidedeck = 'ms-tech-summit-16';
+  slidedeck = 'topconf-de-17';
 }
 
 let extension = process.argv.indexOf('--notes') !== -1 ? '.notes' : '';
@@ -21,16 +21,16 @@ mkdirp.sync('code');
 const URL = `http://localhost:${PORT}/${slidedeck}/index${extension}.html`;
 
 function createWindow() {
-  win = new BrowserWindow({width: 1280, height: 720, frame: true});
+  win = new BrowserWindow({ width: 1280, height: 720, frame: true });
 
   win.loadURL(URL);
 
   if (process.env.NODE_ENV === 'debug') {
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
   }
 
   win.on('closed', () => {
-    win = null 
+    win = null;
   });
 }
 
@@ -40,7 +40,7 @@ function createServer() {
     server.use(express.static('slides'));
     server.listen(PORT, () => {
       resolve(server);
-    }); 
+    });
   });
 }
 
@@ -58,6 +58,6 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
   if (win === null) {
-    createWindow()
+    createWindow();
   }
 });
