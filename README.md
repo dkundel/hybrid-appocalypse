@@ -9,6 +9,7 @@ If you are looking for resources about hybrid app development check out the [RES
 This talk has been presented at:
 - [Devfest Austria 2016 in Vienna](http://devfest.at)
 - [Microsoft Technology Summit Germany 2016](https://www.microsoft.com/germany/technical-summit/default.aspx)
+- [Topconf Düsseldorf 2017](https://www.topconf.com/conference/duesseldorf-2017/)
 
 ## Setup Instructions
 
