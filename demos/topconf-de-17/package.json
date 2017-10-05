@@ -1,0 +1,9 @@
+{
+  "name": "topconf-de-2017",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": { "electron": "1.7.8" }
+}

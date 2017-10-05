@@ -1,0 +1,66 @@
+<header>Topconf Duesseldorf</header>
+<aside>Navbar</aside>
+<div id="main">
+  Hello Topconf
+  <p>
+    <script>
+      document.write(process.versions.electron)
+    </script>
+  </p>
+  <p>
+    <script>
+      document.write(process.versions.node)
+    </script>
+  </p>
+  <p>
+    <script>
+      document.write(process.versions.chrome)
+    </script>
+  </p>
+  <button id="click">Hello</button>
+</div>
+<footer>@dkundel dkundel@twilio.com</footer>
+
+<script>
+  document.getElementById('click').addEventListener('click', () => {
+    const ipc = require('electron').ipcRenderer;
+
+    ipc.send('error');
+  })
+</script>
+
+<style>
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    display: grid;
+    grid-template-areas: "h h h" "n m m" "f f f";
+    grid-template-columns: 90px auto;
+    grid-template-rows: 80px auto 30px;
+  }
+
+  header {
+    grid-area: h;
+    background: red;
+  }
+
+  aside {
+    grid-area: n;
+    background: lightgrey;
+  }
+
+  footer {
+    grid-area: f;
+    background: darkgrey;
+  }
+
+  #main {
+    grid-area: m;
+  }
+</style>
