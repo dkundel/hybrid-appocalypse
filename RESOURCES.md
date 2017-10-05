@@ -2,7 +2,8 @@
 
 ## Talk related
 - [Setup](README.md) - Instructions how to run these slides
-- [Slides](/slides) - You can find the slides for every version of this talk here
+- [Slides](/slides) - You can find the code of the slides for every version of this talk here
+- [Actual Slides](http://dkundel.github.io/hybrid-appocalypse) - You can find the actual slides for every talk here
 - [Demos](/demos) - This folder contains the demo apps built at the various talks
 
 ## :computer: Desktop
@@ -11,6 +12,8 @@
 - [Electron API Demo](https://github.com/electron/electron-api-demos) - Great Electron app that shows off different APIs
 - [Electron Quick Start](http://electron.atom.io/docs/tutorial/quick-start/) - Shows you how to get started with developing with Electron
 - [Electron Organization](https://github.com/electron) - :octocat: organization for Electron
+- [Electron Userland](https://github.com/electron-userland) - :octocat: organization of a collection of community created tools for Electron
+- [Electron Forge](https://electronforge.io/) - Command-line tool to bootstrap your Electron project with a series of templates for React, Angular, Vue, etc.
 - [Submission to App Store](http://electron.atom.io/docs/tutorial/mac-app-store-submission-guide/) - Guide how to deploy to the Mac App Store
 - [Windows Store Guide](http://electron.atom.io/docs/tutorial/windows-store-guide/) - Guide how to submit to the Windows Store
 - [Electron Community](http://electron.atom.io/community/) - Great page that highlights various community contributions (modules, UI components, videos, meetups, etc.)
