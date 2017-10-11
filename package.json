@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "serve": "serve slides",
-    "deploy": "git subtree push --prefix slides origin gh-pages"
+    "deploy": "git subtree push --prefix slides origin gh-pages",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
     "electron": "1.7.8",
     "express": "^4.14.0",
     "mkdirp": "^0.5.1",
-    "serve": "^1.4.0"
-  }
+    "serve": "^5.2.0",
+    "snyk": "^1.42.6"
+  },
+  "snyk": true
 }
