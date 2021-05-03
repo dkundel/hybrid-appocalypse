@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/dkundel/hybrid-appocalypse#readme",
   "dependencies": {
-    "electron": "1.8.4",
+    "electron": "10.4.4",
     "express": "^4.14.0",
     "mkdirp": "^0.5.1",
     "serve": "^7.0.0",
