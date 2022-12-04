@@ -23,9 +23,9 @@
   "homepage": "https://github.com/dkundel/hybrid-appocalypse#readme",
   "dependencies": {
     "electron": "1.8.4",
-    "express": "^4.14.0",
+    "express": "^4.17.3",
     "mkdirp": "^0.5.1",
-    "serve": "^7.0.0",
+    "serve": "^2.0.0",
     "snyk": "^1.42.6"
   },
   "snyk": true
